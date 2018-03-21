@@ -1,4 +1,4 @@
-1spring概述
+1.1spring概述
 1.1.1
 第一阶段：xml配置
 
@@ -19,4 +19,28 @@ web：spring-web spring-webmvc spring-websocket spring webmvc-portlet
 数据访问/集成：spring-jdbc spring-tx spring-orm spring-oxm spring-jms
 
 spring生态
+spring data spring boot spring cloud spring mobile等
 
+1.2 spring项目快速搭建
+传统方式：创建新项目，复制第三方jar包到类路径下
+项目构建工具：ant maven gradle
+maven:project object model 管理项目的依赖、编译、文档等
+项目以来jar包不在包含项目中，集中放在.m2文件下
+
+maven中pom.xml
+dependencies dependency properties 编译插件
+
+spring项目搭建
+1基于spring tool suite搭建
+2基于idea
+3基于netbean
+
+1.3spring基础配置
+1.3.1依赖注入
+inversion of control\ dependency injection
+控制反转是通过依赖注入实现的  依赖注入指的是容器负责创建对象和维护对象间 的依赖关系 而不是通过对象本身赋值自身创建和解决自己的依赖
+依赖注入的主要目的是为了解耦 ioc容器（applicationcontext）负责创建bean通过容器将功能类bean注入到需要的bean中 spring通过xml、注解、java配置、groovy配置来实现bean创建和注入
+xml、注解、java配置都被称为配置元数据（描述数据的数据）本身没有任何执行能力，只能通过外界代码对数据进行解析后进行一些有意义操作
+
+声明bean注解：@component @service @repository @controller
+注入bean注解：@autowired @inject @resource
