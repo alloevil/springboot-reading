@@ -1,0 +1,22 @@
+1spring概述
+1.1.1
+第一阶段：xml配置
+
+第二阶段：注解配置
+应用的基本配置用xml，业务配置用注解
+
+第三阶段：java配置
+推荐使用
+
+1.1.2
+spring框架主要提供了iox容器、aop、数据访问、web开发、消息、测试等相关技术的支持
+
+spring模块
+核心容器：spring-core spring-beans spring-context spring-context-support spring-expression
+aop：spring-aop spring-aspect
+消息：spring-message
+web：spring-web spring-webmvc spring-websocket spring webmvc-portlet
+数据访问/集成：spring-jdbc spring-tx spring-orm spring-oxm spring-jms
+
+spring生态
+
