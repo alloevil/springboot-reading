@@ -1,0 +1,9 @@
+spring高级话题
+3.1spring aware
+spring依赖注入最大亮点是所有bean对spring容器的存在是没有意识的，bean之间的耦合度很低
+若使用spring aware bean将会和spring框架耦合
+
+3.2多线程
+spring通过任务执行器（taskexecutor）来实现多线程和并发编程，实际开发中任务一般是非阻碍的 即异步的，所以我们要在配置类中通过@enableasync开启对异步任务支持，通过在实际执行的bean
+中使用@async注解来声明是一个异步任务
+
