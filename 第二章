@@ -1,1 +1,33 @@
+spring常用配置
+
+2.1 bean的scope
+2.1.1
+scope描述的是spring容器如何新建bean的实例的spring的scope又以下几种，通过@scope注解来实现
+singleton：（spring默认配置，全容器共享一个实例）
+prototype、request、session、globalsession
+
+2.2 springel 和资源调用
+springel 支持在xml和注解中使用表达式类似于jsp中的el表达式
+spring的表达式语言实现资源的注入
+spring主要在注解@value的参数中使用表达式
+
+2.3bean的初始化和销毁
+bean在使用之前或之后做些必要的操作，使用java配置和注解有两种方式：
+
+java配置方式：使用bean的initmethod和destorymethod，
+注解方式：利用JSR-250的@postconstruct和@predestory
+（书缺页。。）
+
+2.4profile
+profile为在不同环境下使用不同的配置提供了支持
+（1）通过设定enviroment的activeprofiles来设定当前context需要是以哦那个的配置环境，在开发中使用@profile注解类或者方法，达到在不同情况下选择实例化不同的bean
+（2）通过jvm的spring。profiles。active参数来设置配置环境
+（3）web项目设置在servlet的context parameter中
+
+2.5 事件 application event
+spring事件为bean与bean之间的消息通信提供了支持，当一个bean处理完一个任务之后，希望另外一个bean知道并能做相应的处理，这时候我们就需要让另外一个bean监听当前bean所发送的事件
+spring的事件需要遵循如下流程：
+1自定义事件 集成applicationevent
+2定义事件监听器 实现applicationlistener
+3使用容器发布事件
 
