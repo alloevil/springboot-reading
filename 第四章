@@ -1,0 +1,18 @@
+spring mvc基础
+4.1 spring mvc 概述
+mvc：model+view+controller
+三层架构：presentation tier application tier data tier
+
+日志配置：在src/main/resources目录下 新建logback.xml用来配置日志
+
+4.3 spring mvc常用注解：
+@controller dispatcher servlet会自动扫描注解了的类，并将web请求映射到注解了@requestingmapping的方法上
+@requestingmapping 注解用来映射web请求、处理类和方法 requestmapping可注解在类或方法上  支持servlet的request和response作为参数 支持对request和response的媒体类型进行配置
+@responsebody 支持将返回值放在response体内，而不是返回一个页面 
+@requestbody 允许request的参数在request体中 而不是直接链接在地址后面
+@pathvariable 用来接收路径参数
+@restcontroller是一个组合注解 组合了@controller和@responsebody
+
+4.4 spring mvc基本配置
+spring mvc的定制配置需要我们的配置类集成一个webmvcconfigueradapter类 并在此类使用@enablewebmvc注解 来开启对spring mvc的配置支持
+
