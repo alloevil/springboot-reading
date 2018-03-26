@@ -1,0 +1,23 @@
+6.1基本配置
+6.1.1 入口类和@springbootapplication
+springboot 通常又一个名为*application的入口类，入口类中又一个main方法，这个main方法其实就是一个标准的java应用入口方法
+在main方法中使用springapplication.run启动springboot应用项目
+@springbootapplication 是springboot核心注解，是一个组合注解
+包含：@target
+@retention
+@inherited
+@configuration
+@enableautoconfiguration
+@componentscan
+若不使用@springbootapplication 则可以在入口类上直接使用@configuration\@enableautoconfiguration\@componentscan
+其中 @enableautoconfiguration让springboot根据类路径中的jar包依赖为当前项目进行自动配置
+类如添加了spring-boot-starter-data-jpa依赖，springboot会自动进行jpa相关配置
+
+6.1.2关闭特定的自动配置
+关闭特定的自动配置应该使用@springbootapplication注解的exclude参数
+
+6.1.4springboot配置文件
+springboot使用一个全局的配置文件
+springboot使用一个全局的配置文件application.properties或application.yml放在src/main/resources目录或者类路径的/config下
+springboot不仅支持常规的properties配置文件，还支持yaml语言的配置文件，yaml是以数据为中心的语言，在配置数据的时候和又面向对象的特征
+
