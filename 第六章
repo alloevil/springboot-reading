@@ -20,4 +20,34 @@ springboot 通常又一个名为*application的入口类，入口类中又一个
 springboot使用一个全局的配置文件
 springboot使用一个全局的配置文件application.properties或application.yml放在src/main/resources目录或者类路径的/config下
 springboot不仅支持常规的properties配置文件，还支持yaml语言的配置文件，yaml是以数据为中心的语言，在配置数据的时候和又面向对象的特征
+springboot的全局配置文件的作用是对一些默认配置的配置值进行修改
+
+6.1.5 starter pom
+springboot为我们提供了简化企业级开发绝大多数场景的starter pom，只要使用了应用场景所需要的starter pom相关的技术配置将会消除 就会得到
+spring boot为我们提供的自动配置的bean
+
+6.2 外部配置
+springboot允许使用properties文件、yaml文件或者命令行参数作为外部配置
+
+6.2.1 命令行参数配置
+springboot可以基于jar包运行
+
+6.2.2 常规属性配置
+在常规spring环境下 注入蓬茸properties文件里的值的方式通过@propertysource指明properties文件的位置，然后通过@value诸如之 
+在springboot中 我们只需要在application.proerties定义属性，直接@value注入即可
+
+6.2.3 类型安全的配置（基于properties）
+通过@value注入每个配置在实际项目中会显得格外麻烦，因为配置通常会是许多个，若使用上例的方式则要使用@value注入很多次
+springboot提供了基于类型安全的配置方式，@configurationproperties将properties属性和一个bean及属性关联，从而实现类型安全的配置
+
+6.3日志配置
+springboot支持java util logging log4j2和logback作为日志框架 
+默认情况下 springboot使用logback作为日志框架
+配置日志级别：
+logging.file=。。。
+logging.level.org.springframework.web=debug
+
+profile配置
+profile是spring用来针对不同的环境对不同的配置提供支持，全局profile配置使用application-{profile}.properties
+通过在application.properties中设置spring.profiles.active=prod来制定活动的profile
 
