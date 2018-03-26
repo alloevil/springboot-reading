@@ -47,7 +47,16 @@ springboot支持java util logging log4j2和logback作为日志框架
 logging.file=。。。
 logging.level.org.springframework.web=debug
 
-profile配置
+6.4profile配置
 profile是spring用来针对不同的环境对不同的配置提供支持，全局profile配置使用application-{profile}.properties
 通过在application.properties中设置spring.profiles.active=prod来制定活动的profile
 
+6.5 spring boot 运行原理
+可以通过三种方式查看当前项目中已启用和未启用的自动配置的报告
+1 运行jar时增加--debug参数
+java -jar xx.jar --debug
+2 在application.properties中设置属性：
+debug=true
+3sts中run configuration
+
+6.5.1运行原理
