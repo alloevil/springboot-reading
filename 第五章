@@ -1,0 +1,25 @@
+spring boot 基础
+
+spring boot 概述
+
+5.1.1什么是spring boot
+动态语言的流行（ruby、groovy、scala、node.js），java开发显得格外笨重：繁多的配置、低下的开发效率、复杂的部署流程
+以及第三方技术集成难度大
+springboot使用“习惯优于配置”（项目中存在大量的配置，此外还内置一个习惯性的配置，让你无需手动配置）的理念让你的项目
+快速运行起来，使用spring boot很容易创建一个独立运行（运行jar，内嵌servlet）、准生产级别的基于spring框架的项目，使用
+springboot可以不用或者需要很少的spring配置
+
+5.1.2spring boot 核心功能
+1独立运行的spring项目
+spring boot可以以jar包形式独立运行，运行一个spring boot项目只需要java -jarxx.jar来运行
+2内嵌servlet
+springboot可选择内嵌tomcat、jetty或者unsertow，这样我们无需以war包形式部署项目
+3提供starter简化maven配置
+spring提供了一系列starer pom来简化maven的依赖加载
+4自动配置spring
+spring boot会根据在类路径中的jar包、类，为jar包里的类自动配置bean，这样会极大减少我们需要的配置，若spring boot没有提供支持，可以自定义自动配置
+5准生产的应用监控
+springboot提供基于http、ssh、telnet对运行时的项目进行监控
+6无代码生成和xml配置
+springboot的神奇不是借助于代码生成来实现的，而是通过条件 实现，spring4.x提供的新特性 
+spring boot不需要任何xml配置即可实现spring所有配置
