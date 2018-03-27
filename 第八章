@@ -1,0 +1,9 @@
+springboot的数据访问
+springdata是spring用来解决数据访问问题的一揽子解决方案，包含了大量关系型数据库级非关系型数据库的数据访问解决方案，
+使我们可以快速且简单地使用普通的数据访问技术及新的数据访问技术
+spring data为我们使用统一的api来对上述的数据存储技术进行数据访问操作提供了支持，这是spring通过使用spring data commons
+项目来实现的，它是上述各种spring data项目的依赖，spring datacommons让我们在使用关系型或非关系型数据访问技术时都使用基于spring的统一标准，该标准包含crud相关操作
+
+spring data jpa
+8.2.1 spring data jpa
+什么是springdatajpa
