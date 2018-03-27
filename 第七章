@@ -1,0 +1,42 @@
+spring boot 的web开发
+7.3.3注册servlet、filter、listener
+当使用嵌入式servlet容器（tomcat、jetty等）时，我们通过将servlet、filter和listener声明为spring bean而达到注册的效果；或者
+注册servletregistrationbean、filterregistrationbean和servletlistenerregistratoinbean的bean
+
+7.4tomcat配置
+其实是servlet容器的配置，spring boot默认内嵌tomcat为servlet容器
+
+7.4.1配置tomcat
+tomcat属性都在配置类中做了定义，只需在application.properties配置属性做配置即可，通用的servlet容器配置都以server作为前缀，
+tomcat特有配置都以server.tomcat作为前缀
+
+7.4.2 代码配置tomcat
+需要通过代码配置servlet容器，则可以注册一个实现embededservletcontainercustomizer接口的bean
+
+7.4.4 ssl配置
+
+7.5 favicon配置
+7.5.1默认的favicon
+springboot提供了一个默认的favicon
+
+7.5.2 关闭favicon
+可以在application.properties中设置关闭favicon，默认为开启
+spring.mvc.favicon.enabled=false
+
+7.5.3 设置自己的favicon
+需将自己的favicon.ico文件放在类路径根目录、类路径meta-inf/iresources/下、类路径resources/下等
+
+7.6websocket
+7.6.1什么是websocket
+websocket为浏览器和服务端提供了双工异步通信的功能，即浏览器可以向服务端发送消息，服务端也可以向浏览器发送消息
+websocket是通过一个socket来实现双工异步通信能力的，我们会使用子协议stomp，它是一个更高级的协议，使用一个基于帧
+的格式来定义消息，与http的request和response类似
+
+7.6.2 springboot提供的自动配置
+广播式
+服务端又消息时会将消息发送给所有连接了当前endpoint浏览器
+配置websocket 在配置类上使用@enablewebsocketmessagebroker开启websocket支持
+@messagemapping
+点对点式
+
+
