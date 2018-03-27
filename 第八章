@@ -7,3 +7,11 @@ spring data为我们使用统一的api来对上述的数据存储技术进行数
 spring data jpa
 8.2.1 spring data jpa
 什么是springdatajpa
+
+声明式事务
+使用transactional注解在方法上，基于aop的实现操作，被注解方法在被调用时，spring开启一个新的事务 方法无异常运行结束后，spring会提交这个事务
+使用enabletransactionmanagement后，spring容器会自动扫描注解@transactional的方法和类
+注解在类上的时候意味着此类public方法都是开启事务的，如果类级别和方法级别同时使用@transactional注解则使用在类级别的注解，则使用在类级别的注解会重载方法级别的注解
+
+8.4.5 springdata jpa事务支持
+
