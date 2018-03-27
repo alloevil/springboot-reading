@@ -28,3 +28,7 @@ spring batch是用来处理大量数据操作的一个框架，主要用来读�
 9.3.1企业级消息代理
 jms即java消息服务，是基于jvm消息代理的规范 
 spring需要connectionfactory的实现来连接消息代理
+
+
+9.4 系统集成spring integration
+spring integration提供基于spring的eip，主要解决问题是不同系统之间交互问题，通过异步消息驱动来达到系统交互系统间的松耦合
