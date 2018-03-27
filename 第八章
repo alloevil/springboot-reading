@@ -15,3 +15,19 @@ spring data jpa
 
 8.4.5 springdata jpa事务支持
 
+8.5数据缓存cache
+8.5.1spring缓存支持
+spring支持的cachemanager
+spring提供4各注解来声明缓存规则
+@cache
+@cacheput
+@cacheevict
+@caching
+spring boot支持“spring.cache”为前缀的属性来配置缓存
+
+8.6 非关系型数据库nosql
+文档存储型mongodb
+图形关系存储型neo4j
+键值对redis
+
+
