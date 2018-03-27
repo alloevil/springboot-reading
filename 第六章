@@ -60,3 +60,6 @@ debug=true
 3sts中run configuration
 
 6.5.1运行原理
+@springbootapplication 核心功能是由@enableautoconfiguration注解提供的
+@enableautoconfiguration使用springfactoriesloader.loadfactoryNames方法來掃描具有meta-inf/spring.factories文件的jar包，
+而我们的spring-boot-autoconfigure-1.3.0.x.jar中有一个spring.factories文件，
