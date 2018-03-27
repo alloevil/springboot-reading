@@ -1,0 +1,9 @@
+spring boot企业级开发
+9.1 安全控制spring security
+spring security 是专门针对基于spring的项目的安全框架，充分利用了依赖注入和aop来实现安全功能
+安全框架又两个重要概念即认证和授权，认证即确认用户可以访问当前系统，授权即确定用户在当前系统下所拥有的功能权限
+
+9.1.1spring security配置
+
+delegatingfilterproxy
+springsecurity 提供了 一个多个过滤器来实现所有安全功能，我们注册一个特殊delegatingfilterproxy过滤器到webapplicationinitializer
